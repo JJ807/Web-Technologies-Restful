@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aplikacja pogodowa</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="rest.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="sidebar">
+        <nav id="navbar" class="navbar">
+        <a id="menu_form" onclick="display_weather_form(this.id)"
+          >Dodaj dane pogodowe</a
+        >
+        <a id="menu_reg" onclick="display_register_form(this.id)">Rejestracja</a>
+        <a id="menu_login" onclick="display_login_form(this.id)">Logowanie</a>
+        
+
+        <a id="menu_localdb" onclick="display_table(this.id)">Dane lokalnej BD</a>
+        <a id="menu_tab_mongo" onclick="display_table_mongo(this.id)">Dane bazy MongoDB</a>
+        <a id="menu_sync" onclick="synchro()">Synchronizacja danych</a>
+        <a id="menu_chart" onclick="analyze_data(this.id)">Analiza danych - wykres</a>
+        <a id="menu_logout" onclick="log_out()">Wyloguj</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mainContent">
+      <div class="appName">
+        <h1>Aplikacja pogodowa</h1>
+        <img src="./logo.png" alt="logo" />
+      </div>
+      
+      <div id="contentWrapper">
+        <div id="content"></div>
+      </div>
+
+      <div id="weatherForm"></div>
+    </div>
+
+    <footer><p>Jakub Strugała, AGH Informatyka Stosowana</p></footer>
+  </body>
+</html>
